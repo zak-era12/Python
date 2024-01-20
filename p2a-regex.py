@@ -1,23 +1,25 @@
 #Regular Expressions
-
-'''import re
- 
+#Extracting names and ages from a string
+import re 
 Nameage = '''
-#Janice is 22 and Theon is 33
-#Gabriel is 44 and Joey is 21
+Janice is 22 and Theon is 33
+Gabriel is 44 and Joey is 21
 '''
  
-ages = re.findall(r'd{1,3}', Nameage)
+ages = re.findall('\d+', Nameage)
 names = re.findall(r'[A-Z][a-z]*',Nameage)
- 
+
+print(ages)
+print(names)
+
+
 ageDict = {}
 x = 0
 for eachname in names:
     ageDict[eachname] = ages[x]
     x+=1
-    print(ageDict)
-'''
 
+print(ageDict)
 
 #RE Example 1
 import re
